@@ -64,3 +64,10 @@ end
   )
 end
 
+15.times do
+  city = City.update(
+    doctor_id: Doctor.pluck(:id).sample,
+    patient_id: Patient.pluck(:id).sample,
+    appointment_id: Appointment.pluck(:id).sample,
+  )
+end
